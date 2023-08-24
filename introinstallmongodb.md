@@ -42,6 +42,7 @@ The following table lists the relation between MongoDB and RDBMS terminologies.
 
 In the RDBMS database, a table can have multiple rows and columns. Similarly in MongoDB, a collection can have multiple documents which are equivalent to the rows. Each document has multiple "fields" which are equivalent to the columns. Documents in a single collection can have different fields.
 
+#### Image
 <img src='jsonsample.webp'/>
 
 ## Advantages of MongoDB
@@ -63,11 +64,11 @@ https://www.mongodb.com/try/download/community
 
 ## MongoDB Server
 We installed MongoDB as a Network service. To see this, open Services by searching "service" in the windows search box and click on the Services app, as shown below.
-
+#### Image
 <img src='services.webp'/>
 
 On the Services window, navigate to MongoDB Server, as shown below. You will find that it is already up and running.
-
+#### Image
 <img src='mongo-service.webp'/>
 
 Now, the MongoDB Server service is already running, you can connect the MongoDB client to connect with this MongoDB server and execute the commands.
@@ -78,19 +79,19 @@ Now, the MongoDB Server service is already running, you can connect the MongoDB 
 MongoDB Compass is a GUI based tools to interact with local or remote MongoDB server and databases. Use Compass to visually explore your data, run ad hoc queries, perform CRUD operations, and view and optimize your query performance. It can be installed on Linux, Mac, or Windows.
 
 Now, do a window search on "mongodb compass" and open it, as shown below.
-
+#### Image
 <img src='compass_login.png' />
 
 On the main page, click on the New Connection tab on the left pane to open New Connection page shown above. You can paste a connection string or click on Fill in connection fields individually link. This will open the following window where you can enter the host name, port, username, password, etc.
-
+#### Image
 <img src='compass_home.png'/>
 
 Now, you can create, modify, delete databases, collections, documents using MongoDB Compass. Click on the CREATE DATABASE button to create a new database. This will open Create Database popup, as shown below.
-
+#### Image
 <img src='compass_create.png' />
 
 Enter your database name and collection name and click Create Database. This will create a new database humanResourceDB with the new employees collection shown below.
-
+#### Image
 <img src='compass_emp.png' />
 
 Thus, you can use MongoDB Compass UI to manage your MongoDB databases.
@@ -100,7 +101,7 @@ Thus, you can use MongoDB Compass UI to manage your MongoDB databases.
 Click on plus icon near DB name and create collection as show in below screen 
 
 add a new collection as departments
-
+#### Image
 <img src='compass_create_collection.png' />
 
 ## MongoDB Documents: Document, Array, Embedded Document
@@ -108,13 +109,13 @@ add a new collection as departments
 In the RDBMS database, a table can have multiple rows and columns. Similarly in MongoDB, a collection can have multiple documents which are equivalent to the rows. Each document has multiple "fields" which are equivalent to the columns. So in simple terms, each MongoDB document is a record and a collection is a table that can store multiple documents.
 
 The following is an example of JSON based document.
-
+#### Image
 <img src='jsonsample.webp'/>
 
 In the above example, a document is contained within the curly braces. It contains multiple fields in "field":"value" format. Above, "_id", "firstName", and "lastName" are field names with their respective values after a colon :. Fields are separated by a comma. A single collection can have multiple such documents separated by a comma.
 
 The following chart to understand the relation between database, collections, and documents.
-
+#### Image
 <img src='Documents_ Document_Array_Embedded Document.png'/>
 
 The following is an example of a document that contains an array and an embedded document.
