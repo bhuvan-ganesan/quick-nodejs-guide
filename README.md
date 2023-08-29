@@ -10,7 +10,7 @@ Guide to MongoDB and Node.js
 | No |                                                                       Topics                                                                        |
 | ----- | :------------------------------------------------------------------------------: |
 | 01    |[MongoDB Introduction and Installation](introinstallmongodb.md) |
-| 02    |[](./02_html/html_01.md) |
+| 02    |[What is Node.js? ](01_node_intro.md) |
 | 02    |[Introduction to HTML](./02_html/html_01.md) |
 
 
