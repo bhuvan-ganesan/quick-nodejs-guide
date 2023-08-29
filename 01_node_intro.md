@@ -17,8 +17,6 @@ Node.js was written and introduced by Ryan Dahl in 2009.
 
 Node.js on github: https://github.com/nodejs/node
 
-Node.js community conference http://nodeconf.com 
-
 ## Advantages of Node.js
  1. Node.js is an open-source framework under MIT license. (MIT license is a free software license originating at the Massachusetts Institute of Technology (MIT).)
  2. Uses JavaScript to build entire server side application.
