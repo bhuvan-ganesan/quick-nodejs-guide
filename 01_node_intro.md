@@ -37,3 +37,104 @@ An event loop is constantly watching for the events to be raised for an asynchro
 
 Node.js process model increases the performance and scalability with a few caveats. Node.js is not fit for an application which performs CPU-intensive operations like image processing or other heavy computation work because it takes time to process a request and thereby blocks the single thread.
 
+## Install Node.js 
+
+In this section, you will learn about the tools required and steps to setup development environment to develop a Node.js application.
+
+Node.js development environment can be setup in Windows, Mac, Linux and Solaris. The following tools/SDK are required for developing a Node.js application on any platform.
+
+    1. Node.js
+    2. Node Package Manager (NPM)
+    3. IDE (Integrated Development Environment) or TextEditor
+
+NPM (Node Package Manager) is included in Node.js installation since Node version 0.6.0., so there is no need to install it separately. 
+
+### Install Node.js on Windows
+
+Visit Node.js official web site https://nodejs.org. It will automatically detect OS and display download link as per your Operating System. For example, it will display following download link for 64 bit Windows OS. 
+
+Download the installer for windows by clicking on LTS or Current version button. Here, we will install the latest version LTS for windows that has long time support.
+
+### Verify Installation
+
+Once you install Node.js on your computer, you can verify it by opening the command prompt and typing ** node -v**. If Node.js is installed successfully then it will display the version of the Node.js installed on your machine, as shown below. 
+
+## Node.js Basics
+
+Node.js supports JavaScript. So, JavaScript syntax on Node.js is similar to the browser's JavaScript syntax. 
+
+### Primitive Types
+ Node.js includes following primitive types:
+
+    1. String
+    2. Number
+    3. Boolean
+    4. Undefined
+    5. Null
+    6. RegExp
+
+Everything else is an object in Node.js. 
+### Loose Typing
+
+JavaScript in Node.js supports loose typing like the browser's JavaScript. Use var keyword to declare a variable of any type. 
+
+### Object Literal
+
+Object literal syntax is same as browser's JavaScript. 
+
+```
+var obj = {
+    authorName: 'Ryan Dahl',
+    language: 'Node.js'
+}
+```
+
+### Functions
+
+Functions are first class citizens in Node's JavaScript, similar to the browser's JavaScript. A function can have attributes and properties also. It can be treated like a class in JavaScript. 
+
+```
+function Display(x) { 
+    console.log(x);
+}
+
+Display(100);
+```
+
+### Buffer
+
+ Node.js includes an additional data type called Buffer (not available in browser's JavaScript). Buffer is mainly used to store binary data, while reading from a file or receiving packets over the network.
+#### process object
+
+Each Node.js script runs in a process. It includes process object to get all the information about the current process of Node.js application.
+
+The following example shows how to get process information in REPL using process object.
+```
+> process.execPath
+'C:\\Program Files\\nodejs\\node.exe'
+> process.pid
+1652
+> process.cwd()
+'C:\\' 
+```
+
+### Defaults to local
+
+Node's JavaScript is different from browser's JavaScript when it comes to global scope. In the browser's JavaScript, variables declared without var keyword become global. In Node.js, everything becomes local by default.
+
+### Access Global Scope
+In a browser, global scope is the window object. In Node.js, global object represents the global scope.
+To add something in global scope, you need to export it using export or module.export. The same way, import modules/object using require() function to access it from the global scope.
+For example, to export an object in Node.js, use exports.name = object. 
+
+```
+exports.log = {
+    console: function(msg) {
+        console.log(msg);
+    },
+    file: function(msg) {
+        // log to file here
+      }
+}
+```
+Now, you can import log object using require() function and use it anywhere in your Node.js project. 
