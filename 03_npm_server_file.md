@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>NPM Serve Fiel</h1>
+  <h1>NPM Serve File</h1>
   <sub>Author:
 <a href="https://www.linkedin.com/in/bhuvanaganesan-l-2209047a" target="_blank">Bhuvan Ganesan</a><br>
 </sub>
@@ -184,4 +184,20 @@ var server = http.createServer(function (req, res) {
 server.listen(5000);
 console.log('Node.js web server at port 5000 is running..')
 ```
+
+## Node.js File System
+
+Node.js includes fs module to access physical file system. The fs module is responsible for all the asynchronous or synchronous file I/O operations.
+
+Let's see some of the common I/O operation examples using fs module.
+## Reading a File
+Use the fs.readFile() method to read the physical file asynchronously. 
+```
+fs.readFile(fileName [,options], callback)
+```
+Parameter Description:
+
+    - filename: Full path and name of the file as a string.
+    - options: The options parameter can be an object or string which can include encoding and flag. The default encoding is utf8 and default flag is "r".
+    - callback: A function with two parameters err and fd. This will get called when readFile operation completes.
 
