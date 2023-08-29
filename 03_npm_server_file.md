@@ -159,5 +159,28 @@ var server = http.createServer(function (req, res) {   //create web server
 });
 server.listen(5000); //6 - listen for any incoming requests
 console.log('Node.js web server at port 5000 is running..')
+```
+Above example, req.url is used to check the url of the current request and based on that it sends the response. To send a response, first it sets the response header using writeHead() method and then writes a string as a response body using write() method. Finally, Node.js web server sends the response using end() method.
 
+Now, run the above web server as shown below. 
+```
+C:\> node server.js
+Node.js web server at port 5000 is running.. 
+```
+To test point your browser to http://localhost:5000 and see the following result. 
+The same way, point your browser to http://localhost:5000/student and see the following result.
+
+### Sending JSON Response
+The following example demonstrates how to serve JSON response from the Node.js web server.
+```
+var http = require('http'); 
+var server = http.createServer(function (req, res) {   
+    if (req.url == '/data') { //check the URL of the current request
+            res.writeHead(200, { 'Content-Type': 'application/json' });
+            res.write(JSON.stringify({ message: "Hello World"}));  
+            res.end();  
+    }
+});
+server.listen(5000);
+console.log('Node.js web server at port 5000 is running..')
 ```
