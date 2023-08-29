@@ -96,3 +96,68 @@ The following command will uninstall ExpressJS from the application.
 ```
 C:\MyNodeProj> npm uninstall express 
 ```
+
+## Node.js Web Server
+
+we will learn how to create a simple Node.js web server and handle HTTP requests.
+
+To access web pages of any web application, you need a web server. The web server will handle all the http requests for the web application e.g IIS is a web server for ASP.NET web applications and Apache is a web server for PHP or Java web applications.
+
+Node.js provides capabilities to create your own web server which will handle HTTP requests asynchronously. You can use IIS or Apache to run Node.js web application but it is recommended to use Node.js web server. 
+
+### Create Node.js Web Server
+
+ Node.js makes it easy to create a simple web server that processes incoming requests asynchronously.
+
+The following example is a simple Node.js web server contained in server.js file. 
+```
+var http = require('http'); // 1 - Import Node.js core module
+var server = http.createServer(function (req, res) {   // 2 - creating server
+    //handle incomming requests here..
+});
+server.listen(5000); //3 - listen for any incoming requests
+console.log('Node.js web server at port 5000 is running..')
+```
+Above example, we import the http module using require() function. The http module is a core module of Node.js, so no need to install it using NPM. The next step is to call createServer() method of http and specify callback function with request and response parameter. Finally, call listen() method of server object which was returned from createServer() method with port number, to start listening to incoming requests on port 5000. You can specify any unused port here.
+
+Run the above web server by writing node server.js command in command prompt or terminal window and it will display message as shown below. 
+```
+C:\> node server.js
+Node.js web server at port 5000 is running..
+```
+This is how you create a Node.js web server using simple steps. Now, let's see how to handle HTTP request and send response in Node.js web server.
+
+### Handle HTTP Request
+
+The http.createServer() method includes request and response parameters which is supplied by Node.js. The request object can be used to get information about the current HTTP request e.g., url, request header, and data. The response object can be used to send a response for a current HTTP request.
+[https://nodejs.org/api/http.html#http_http_incomingmessage]
+[https://nodejs.org/api/http.html#http_class_http_serverresponse]
+The following example demonstrates handling HTTP request and response in Node.js.
+```
+var http = require('http'); // Import Node.js core module
+var server = http.createServer(function (req, res) {   //create web server
+    if (req.url == '/') { //check the URL of the current request
+        // set response header
+        res.writeHead(200, { 'Content-Type': 'text/html' }); 
+        // set response content    
+        res.write('<html><body><p>This is home Page.</p></body></html>');
+        res.end();
+    }
+    else if (req.url == "/student") {
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.write('<html><body><p>This is student Page.</p></body></html>');
+        res.end();
+    }
+    else if (req.url == "/admin") {
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.write('<html><body><p>This is admin Page.</p></body></html>');
+        res.end();
+
+    }
+    else
+        res.end('Invalid Request!');
+});
+server.listen(5000); //6 - listen for any incoming requests
+console.log('Node.js web server at port 5000 is running..')
+
+```
