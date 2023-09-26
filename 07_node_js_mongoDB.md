@@ -127,12 +127,13 @@ So, in this way you can connect and access MongoDB database.
 Mongoose is a very popular ODM for MongoDB in Node.js. Mongoose provides a straight-forward, schema-based solution to model your application data. It includes built-in type casting, validation, query building, business logic hooks and more. Visit MongooseJS.com for more information.
 
 https://github.com/icode247/crud-with-mongodb/
+https://www.mongodb.com/developer/languages/javascript/node-crud-tutorial/
 
 ### Note
-https://github.com/mongodb-developer/nodejs-quickstart
-https://www.geeksforgeeks.org/nodejs-interview-questions-and-answers-beginner-level/
-https://www.geeksforgeeks.org/nodejs-interview-questions-and-answers-intermediate-level/
-https://www.geeksforgeeks.org/nodejs-interview-questions-and-answers-advanced-level/
+- https://github.com/mongodb-developer/nodejs-quickstart
+- https://www.geeksforgeeks.org/nodejs-interview-questions-and-answers-beginner-level/
+- https://www.geeksforgeeks.org/nodejs-interview-questions-and-answers-intermediate-level/
+- https://www.geeksforgeeks.org/nodejs-interview-questions-and-answers-advanced-level/
 
 
 
