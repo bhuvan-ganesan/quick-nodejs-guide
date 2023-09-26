@@ -40,3 +40,99 @@ In the above example, we have imported mongodb module (native drivers) and got t
 
 Now you can write insert/update or query the MongoDB database in the callback function of the connect() method using db parameter.
 
+### Insert Documents
+The following example demonstrates inserting documents into MongoDB database.
+```
+var MongoClient = require('mongodb').MongoClient;
+
+// Connect to the db
+MongoClient.connect("mongodb://localhost:27017/MyDb", function (err, db) {
+    
+    db.collection('Persons', function (err, collection) {
+        
+        collection.insert({ id: 1, firstName: 'Steve', lastName: 'Jobs' });
+        collection.insert({ id: 2, firstName: 'Bill', lastName: 'Gates' });
+        collection.insert({ id: 3, firstName: 'James', lastName: 'Bond' });
+        
+        
+
+        db.collection('Persons').count(function (err, count) {
+            if (err) throw err;
+            
+            console.log('Total Rows: ' + count);
+        });
+    });
+                
+});
+```
+In the above example, db.collection() method creates or gets the reference of the specified collection. Collection is similar to table in relational database. We created a collection called Persons in the above example and insert three documents (rows) in it. After that, we display the count of total documents stored in the collection.
+
+Running the above example displays the following result.
+```
+> node app.js
+Total Rows: 3
+```
+
+### Update/Delete Documents 
+The following example demonstrates updating or deleting an existing documents(records).
+```
+var MongoClient = require('mongodb').MongoClient;
+
+// Connect to the db
+MongoClient.connect("mongodb://localhost:27017/MyDb", function (err, db) {
+    
+    db.collection('Persons', function (err, collection) {
+        
+        collection.update({id: 1}, { $set: { firstName: 'James', lastName: 'Gosling'} }, {w:1},
+                                                     function(err, result){
+                                                                if(err) throw err;    
+                                                                console.log('Document Updated Successfully');
+                                                        });
+
+        collection.remove({id:2}, {w:1}, function(err, result) {
+        
+            if(err) throw err;    
+        
+            console.log('Document Removed Successfully');
+        });
+
+    });
+                
+});
+```
+### Query Database
+The following example demonstrates executing a query in the MongoDB database.
+
+```
+var MongoClient = require('mongodb').MongoClient;
+
+// Connect to the db
+MongoClient.connect("mongodb://localhost:27017/MyDb", function (err, db) {
+    
+    db.collection('Persons', function (err, collection) {
+        
+         collection.find().toArray(function(err, items) {
+            if(err) throw err;    
+            console.log(items);            
+        });
+        
+    });
+                
+});
+```
+So, in this way you can connect and access MongoDB database.
+
+### Mongoose
+
+Mongoose is a very popular ODM for MongoDB in Node.js. Mongoose provides a straight-forward, schema-based solution to model your application data. It includes built-in type casting, validation, query building, business logic hooks and more. Visit MongooseJS.com for more information.
+
+https://github.com/icode247/crud-with-mongodb/
+
+### Note
+https://github.com/mongodb-developer/nodejs-quickstart
+https://www.geeksforgeeks.org/nodejs-interview-questions-and-answers-beginner-level/
+https://www.geeksforgeeks.org/nodejs-interview-questions-and-answers-intermediate-level/
+https://www.geeksforgeeks.org/nodejs-interview-questions-and-answers-advanced-level/
+
+
+
