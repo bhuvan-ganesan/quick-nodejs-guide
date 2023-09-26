@@ -15,6 +15,7 @@ Guide to MongoDB and Node.js
 | 04    |[Node Package Manager (NPM) , Web Server and File System](03_npm_server_file.md) |
 | 05    |[Node.js EventEmitter](05_node_js_eventemitter.md) |
 | 06    |[Node.js Frameworks and Express.js](06_node_js_frameworks_expressjs.md) |
+| 07    |[Node.js and MongoDB](07_node_js_mongoDB.md) |
 
 
 
