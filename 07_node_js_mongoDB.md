@@ -21,6 +21,7 @@ This will include mongodb folder inside node_modules folder. Now, start the Mong
 ```
 mongod -dbpath C:\MyNodeJSConsoleApp\MyMongoDB
 ```
+**Imporment**  Avoid using loaclhost use 127.0.0.1
 
 ### Connecting MongoDB
 The following example demonstrates connecting to the local MongoDB database.
@@ -28,7 +29,7 @@ The following example demonstrates connecting to the local MongoDB database.
 var MongoClient = require('mongodb').MongoClient;
 
 // Connect to the db
-MongoClient.connect("mongodb://localhost:27017/MyDb", function (err, db) {
+MongoClient.connect("mongodb://127.0.0.1:27017/MyDb", function (err, db) {
    
      if(err) throw err;
 
