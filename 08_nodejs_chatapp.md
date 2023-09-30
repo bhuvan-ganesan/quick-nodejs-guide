@@ -441,3 +441,11 @@ module.exports = {getUsers, users};
 node app.js
 ```
 
+We have now successfully built a real-time chat application and have a fair understanding of how messages are exchanged from one user to another.
+
+**Some features that you can try to add:**
+
+    - Set up a login system and have the ability to have a friends list.
+    - Connect it to a database, to save all the past messages.
+    - Add About and Profile sections.
+    - Try to implement features similar to WhatsApp.
