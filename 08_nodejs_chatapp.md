@@ -19,8 +19,10 @@ Nodejs Client <------------------------ Serve
 ```
 
 To learn more about WebSocket and Socket.io, visit the following:
+
 [Wiki](https://en.wikipedia.org/wiki/WebSocket?source=post_page)
-[socket js ] (https://socket.io/?source=post_page)
+
+[socket js](https://socket.io/?source=post_page)
 
 
 
