@@ -22,10 +22,35 @@ To learn more about WebSocket and Socket.io, visit the following:
 
 [Wiki](https://en.wikipedia.org/wiki/WebSocket?source=post_page)
 
-[socket js](https://socket.io/?source=post_page)
+[SocketJS](https://socket.io/?source=post_page)
 
 
+## Let's Build Chat application 
 
+### Initialize package.json
+
+Using **npm init** create a **package.json** file. This file holds project-related information like name, author, version, etc. After entering the above command, enter the information as it appears in the terminal.
+
+###  Install Packages
+
+We will use four Node packages for our project.
+
+    **Express** —>  a web application framework for building web applications in Node
+    **Socket.io** —> enables real-time communication between server and browser
+    **EJS (Embedded JavaScript)** —>  a templating language to build HTML markup for your front end
+    **body-parser**  —>  for reading the body of and incoming JSON object from req.body
+
+Now let's import the above packages. Run the following command in the terminal to import.
+
+```
+npm install express socket.io ejs body-parser --save
+```
+
+Create **app.js** file and include the above packages to our code. Also, set other options like body-parser, view engine, public directory, and port address.
+
+```
+
+```
 
 
 
